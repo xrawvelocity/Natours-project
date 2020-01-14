@@ -5,6 +5,7 @@
 
     @include respond(tab-port){
         padding: 20rem 0;
+        padding-top: 30rem;
     }
 }
 
@@ -24,7 +25,7 @@
     }
 
     @include respond(tab-port){
-        padding: 15rem 0;
+        padding: 10rem 0;
     }
 }
 
@@ -44,6 +45,12 @@
 
     @include respond(tab-port){
         padding: 10rem 0;
+    }
+
+    & .u-center-text .heading-secondary {
+        @include respond(phone){
+            width: 60%;
+        }
     }
 }
 
@@ -66,10 +73,21 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black,0.5);
 
-    height: 50rem;
+    @include respond(tab-land) {
+        background-image:linear-gradient(105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 70%,
+        transparent 70%),
+        url(../img/nat-10.jpg);
+
+    }
 
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include respond(tab-land) {
+            width: 70%;
+        }
     }
 }
