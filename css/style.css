@@ -581,14 +581,50 @@ body {
   .popup__left {
     width: 33.33333%;
     display: table-cell; }
+    @media (max-width: 75em) {
+      .popup__left {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        object-fit: cover;
+        height: auto; } }
+    @media (max-width: 56.25em) {
+      .popup__left {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        object-fit: cover;
+        height: auto; } }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        display: none; } }
   .popup__right {
     width: 66.66666%;
     display: table-cell;
     padding: 3rem 5rem;
     vertical-align: middle; }
+    @media (max-width: 75em) {
+      .popup__right {
+        display: inline-block;
+        padding: 5rem;
+        width: 100%;
+        position: relative; } }
+    @media (max-width: 56.25em) {
+      .popup__right {
+        display: inline-block;
+        padding: 5rem;
+        width: 100%;
+        position: relative; } }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        width: 100%; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 56.25em) {
+      .popup__img {
+        display: inline;
+        float: left; } }
   .popup__text {
     font-size: 1.6rem;
     margin-bottom: 4rem;
@@ -598,6 +634,12 @@ body {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 56.25em) {
+      .popup__text {
+        column-count: 1; } }
+    @media (max-width: 37.5em) {
+      .popup__text {
+        column-count: 1; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -613,6 +655,15 @@ body {
     text-decoration: none;
     display: inline-block;
     line-height: 1; }
+    @media (max-width: 56.25em) {
+      .popup__close:link, .popup__close:visited {
+        padding-left: 75rem;
+        position: relative; } }
+    @media (max-width: 37.5em) {
+      .popup__close:link, .popup__close:visited {
+        position: absolute;
+        top: 5%;
+        right: 5%; } }
   .popup__close:hover {
     color: #ff2600; }
 
