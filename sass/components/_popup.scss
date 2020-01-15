@@ -71,6 +71,11 @@
 
         @include respond(phone){
             width: 100%;
+
+            & .heading-secondary {
+                font-size: 2rem;
+                letter-spacing: 0;
+            }
         }
     }
 
@@ -99,6 +104,12 @@
         &--dots {
             display: none;
 
+            @include respond(tab-land){
+                display: none;
+            }
+            @include respond(tab-port){
+                display: inline;
+            }
             @include respond(phone){
                 display: inline;
             }
@@ -108,6 +119,12 @@
         &--more {
             display: inline;
 
+            @include respond(tab-land){
+                display: inline;
+            }
+            @include respond(tab-port){
+                display: none;
+            }
             @include respond(phone){
                 display: none;
             }
@@ -139,9 +156,9 @@
         padding: .5rem 1rem;
 
 
-        @include respond(phone){
+        @include respond(tab-port){
             display: inline;
-            width: 35%;
+            width: 30%;
             margin-bottom: 5rem;
             cursor: pointer;
             transition: all .1s;
@@ -155,6 +172,25 @@
                 outline: none;
                 transform: translateY(-0.1rem);
                 box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
+            }
+        }
+        @include respond(phone){
+            display: inline;
+            width: 60%;
+            margin-bottom: 5rem;
+            cursor: pointer;
+            transition: all .1s;
+
+            &:hover {
+                transform: translateY(-0.3rem);
+                box-shadow: 0 1rem 2rem rgba($color-black,.2);
+            }
+            &:active,
+            &:focus {
+                outline: none;
+                transform: translateY(-0.1rem);
+                box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
+            }
         }
     }
 
@@ -182,13 +218,14 @@
 
             
             @include respond(tab-port){
-                padding-left: 75rem;
-                position: relative;
+                position: absolute;
+                left: 90%;
+                padding:0;
             }
             @include respond(phone){
                 position: absolute;
-                top: 5%;
-                right: 5%;
+                left: 85%;
+                padding: 0;
             }
         }
 
