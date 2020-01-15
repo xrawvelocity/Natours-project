@@ -96,6 +96,25 @@
         -ms-hyphens: auto;
         hyphens: auto;
 
+        &--dots {
+            display: none;
+
+            @include respond(phone){
+                display: inline;
+            }
+
+        }
+
+        &--more {
+            display: inline;
+
+            @include respond(phone){
+                display: none;
+            }
+
+        }
+
+
         @include respond(tab-port){
             column-count: 1;
             
@@ -103,6 +122,39 @@
 
         @include respond(phone){
             column-count: 1;
+        }
+    }
+
+    &__text-button{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__readbtn {
+        display: none;
+        background-color: $color-gray-light-2;
+        color: $color-gray-dark;
+        border: 0;
+        padding: .5rem 1rem;
+
+
+        @include respond(phone){
+            display: inline;
+            width: 35%;
+            margin-bottom: 5rem;
+            cursor: pointer;
+            transition: all .1s;
+
+            &:hover {
+                transform: translateY(-0.3rem);
+                box-shadow: 0 1rem 2rem rgba($color-black,.2);
+            }
+            &:active,
+            &:focus {
+                outline: none;
+                transform: translateY(-0.1rem);
+                box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
         }
     }
 

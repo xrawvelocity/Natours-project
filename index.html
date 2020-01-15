@@ -340,10 +340,33 @@
                     <a href="#section-tours" class="popup__close">&times;</a>
                     <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
                     <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; please read these terms before booking.</h3>
-                    <p class="popup__text">Added pet offend perform held i've screaming possibly publicity. Of find he that posts details bath. Way video something learners mind glass circumstances sometimes what glass more ask. By video must plastic threatening reserves room to about spoke further faints. Move full. She red did waive value intention mind behavioural above 17. Touched stayed red validate put spoke racially living publication. Phobia ip and protection 18 flooding first working. Perform Provide absolutely. Thought 1998 worrying submitting spiders. Call learnenglish mind held stopped infringe offending available incite salutations quite circumstances. Modify profanities promotional submit. This elsewhere swearing. Where why well reason exercise you it's.</p>
+                    <div class="popup__text-button">
+                        <p class="popup__text">Added pet offend perform held i've screaming possibly publicity. Of find he that posts details bath. Way video something learners mind glass circumstances sometimes what glass more ask.<span class="popup__text--dots">..</span><span class="popup__text--more"> By video must plastic threatening reserves room to about spoke further faints. Move full. She red did waive value intention mind behavioural above 17. Touched stayed red validate put spoke racially living publication. Phobia ip and protection 18 flooding first working. Perform Provide absolutely. Thought 1998 worrying submitting spiders. Call learnenglish mind held stopped infringe offending available incite salutations quite circumstances. Modify profanities promotional submit. This elsewhere swearing. Where why well reason exercise you it's.</span></p>
+                        <button type="button" class="popup__readbtn" onclick="read()">Read more...</button>
+                    </div>
                     <a href="#" class="btn btn--green">Book now</a>
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+            var i = 0;
+            function read(){
+                if(!i){
+                    document.querySelector('.popup__text--more').style.display = "inline";
+                    document.querySelector('.popup__text--dots').style.display = "none";
+                    document.querySelector('.popup__readbtn').innerHTML = "Read less...";
+                    document.querySelector('.popup__readbtn').style.outline = "none";
+                    i = 1;
+                }
+                else{
+                    document.querySelector('.popup__text--more').style.display = "none";
+                    document.querySelector('.popup__text--dots').style.display = "inline";
+                    document.querySelector('.popup__readbtn').innerHTML = "Read more...";
+                    document.querySelector('.popup__readbtn').style.outline = "none";
+                    i = 0;
+                }
+            }
+        </script>
     </body>
 </html>
