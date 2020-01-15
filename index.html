@@ -45,7 +45,7 @@
                     <span class="heading-primary--sub">is where life happens</span>
                 </h1>
 
-                <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
+                <a href="javascript: scrollToTours();" class="btn btn--white btn--animated">Discover our tours</a>
             </div>
         </header>
         <main>
@@ -110,7 +110,7 @@
 
             <section class="section-tours" id="section-tours">
                 <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
+                    <h2 class="heading-secondary" id="tours">
                         Most popular tours
                     </h2>
                 </div>
@@ -337,7 +337,7 @@
                     <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo">
                 </div>
                 <div class="popup__right">
-                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <a href="#tours" class="popup__close">&times;</a>
                     <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
                     <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; please read these terms before booking.</h3>
                     <div class="popup__text-button">
@@ -366,6 +366,9 @@
                     document.querySelector('.popup__readbtn').style.outline = "none";
                     i = 0;
                 }
+            }
+            function scrollToTours() {
+                document.querySelector('#tours').scrollIntoView({behavior: 'smooth'});
             }
         </script>
     </body>
