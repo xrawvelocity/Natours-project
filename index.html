@@ -335,7 +335,7 @@
         </footer>
 
         <div class="popup" id="popup">
-            <div class="popup__content">
+            <div class="popup__content" id="content">
                 <div class="popup__left">
                     <img class="popup__img" src="img/nat-8.jpg" alt="Tour photo">
                     <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo">
@@ -383,9 +383,14 @@
             }
 
             var popup = document.querySelector('.popup');
-            popup.addEventListener('click', () => {
-                window.location.hash = "#tours"
-            });
+
+            popup.addEventListener('click', e => {
+                if(e.target.matches('.popup *')) return;
+                else {
+                    window.location.hash = "#tours"
+                }
+            })
+            
             
 
         </script>
